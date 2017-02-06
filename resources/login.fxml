@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" style="-fx-background-color: transparent;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="awesomeui.LoginController">
+    <children>
+        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="246.0" prefWidth="440.0" style="-fx-background-radius: 30; -fx-border-radius: 30;">
+            <bottom>
+                <HBox prefHeight="49.0" prefWidth="550.0" style="-fx-background-color: linear-gradient(to bottom, rgb(145, 85, 145),rgb(142, 77, 141),rgb(117, 63, 121)); -fx-background-radius: 0 0 10 10;" BorderPane.alignment="CENTER" />
+            </bottom>
+            <top>
+                <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="440.0" spacing="5.0" style="-fx-background-color: linear-gradient(to bottom, rgb(154, 98, 161), rgb(137, 78, 136),rgb(110, 56, 114)); -fx-background-radius: 10 10 0 0;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label prefHeight="31.0" prefWidth="327.0" text="Login" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="System Bold" size="21.0" />
+                            </font>
+                        </Label>
+                        <Button contentDisplay="GRAPHIC_ONLY" focusTraversable="false" mnemonicParsing="false" onAction="#help" prefHeight="25.0" prefWidth="25.0" styleClass="btn-menu" text="Button">
+                            <graphic>
+                                <MaterialDesignIconView glyphName="HELP" size="16" />
+                            </graphic>
+                        </Button>
+                        <Button contentDisplay="GRAPHIC_ONLY" focusTraversable="false" layoutX="412.0" layoutY="18.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#minimize" styleClass="btn-menu" text="Button">
+                            <graphic>
+                                <MaterialDesignIconView glyphName="MINUS" size="20" />
+                            </graphic>
+                        </Button>
+                        <Button contentDisplay="GRAPHIC_ONLY" focusTraversable="false" layoutX="412.0" layoutY="18.0" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" styleClass="btn-menu" text="Button">
+                            <graphic>
+                                <MaterialDesignIconView glyphName="CLOSE" size="18" />
+                            </graphic>
+                        </Button>
+                    </children>
+                    <padding>
+                        <Insets right="10.0" />
+                    </padding>
+                </HBox>
+            </top>
+            <center>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right, rgb(180, 98, 164),rgb(204, 120, 170));" BorderPane.alignment="CENTER">
+                    <children>
+                        <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT" size="150">
+                            <effect>
+                                <InnerShadow color="#39003c" height="15.0" offsetY="2.0" radius="7.0" width="15.0" />
+                            </effect>
+                            <HBox.margin>
+                                <Insets left="25.0" />
+                            </HBox.margin>
+                        </MaterialDesignIconView>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" style="-fx-base: rgb(110, 56, 114);">
+                            <HBox.margin>
+                                <Insets bottom="30.0" left="30.0" right="14.0" top="30.0" />
+                            </HBox.margin>
+                        </Separator>
+                        <VBox alignment="CENTER" prefHeight="157.0" prefWidth="236.0" spacing="19.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <TextField fx:id="tfUsuario" alignment="CENTER" onAction="#login" prefHeight="35.0" prefWidth="185.0" promptText="Usuário" style="-fx-base: pink;" styleClass="text-field-login">
+                                    <padding>
+                                        <Insets left="6.0" />
+                                    </padding>
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                    <effect>
+                                        <InnerShadow color="#000000a5" height="12.0" offsetY="1.0" radius="5.5" width="12.0" />
+                                    </effect>
+                                </TextField>
+                                <PasswordField fx:id="tfSenha" alignment="CENTER" onAction="#login" prefHeight="35.0" prefWidth="185.0" promptText="Senha" style="-fx-base: pink;" styleClass="text-field-login">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                    <effect>
+                                        <InnerShadow color="#00000097" height="12.0" offsetY="1.0" radius="5.5" width="12.0" />
+                                    </effect>
+                                </PasswordField>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
+                            </padding>
+                        </VBox>
+                    </children>
+                </HBox>
+            </center>
+            <effect>
+                <DropShadow height="30.0" radius="14.5" width="30.0" />
+            </effect>
+        </BorderPane>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</StackPane>
